@@ -8,7 +8,7 @@ public class InicioButtons : MonoBehaviour
     public string empezar;
     public string opciones;
     public Button StartButton = null;
-    public Button ContinueButton = null;
+    
 
     public Button OptionsButton = null;
     public Button ExitButton = null;
@@ -20,11 +20,7 @@ public class InicioButtons : MonoBehaviour
 
             Empezar();
         });
-        ContinueButton.onClick.AddListener(() =>
-        {
-
-            Continuar();
-        });
+       
         OptionsButton.onClick.AddListener(() =>
         {
 
@@ -42,11 +38,7 @@ public class InicioButtons : MonoBehaviour
         LoadScene(empezar);
      
     }
-    void Continuar()
-    {
-        Debug.Log("continuant");
-        
-    }
+  
     void Options()
     {
         Debug.Log("Options");
@@ -55,6 +47,7 @@ public class InicioButtons : MonoBehaviour
     void Salir()
     {
         Debug.Log("Ixint");
+        Application.Quit();
     }
     public void LoadScene(string scene)
     {

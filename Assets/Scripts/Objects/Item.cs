@@ -6,19 +6,19 @@ public class Item : MonoBehaviour
 {
     public int ID;
     //El tipo del objeto la ponemos en el prefab
-    public string type;
+    public string type = "nada";
     //La descripcion del objeto la ponemos en el prefab
     public string descripcion;
     public Sprite icon;
+    //Sera la cantidad de puntos que subira
+    public int valor;
     
     [HideInInspector]
-    public bool pickedUp;
-
     public bool equipped;
     
     [HideInInspector]
     public GameObject tool;
-    public bool playerWeapon;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +31,16 @@ public class Item : MonoBehaviour
         if (equipped)
         {
 
+            if (Input.GetButtonDown("Fire1"))
+            {
+                
+            }
+            
         }
     }
-    public void ItemUsage()
+    public int ItemUsage()
     {
-        if (type=="Item")
-        {
-            equipped = true;
-        }
+        return valor;
+
     }
 }

@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 2735299784734382892}
   - component: {fileID: 2735299784734382890}
   - component: {fileID: 2735299784734382889}
-  - component: {fileID: 2735299784734382894}
   - component: {fileID: 2735299784734382891}
-  - component: {fileID: 2735299784734382895}
+  - component: {fileID: 6636533669565769562}
+  - component: {fileID: 7400257376338766401}
   m_Layer: 0
   m_Name: Personatge
   m_TagString: Untagged
@@ -218,18 +218,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2735299784734382894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735299784734382888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d585b33c0928a147a2f2b15c4461250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2735299784734382891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,8 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a05c4a1811b9d745bf95f24c7862bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logicaBarraSP: {fileID: 0}
---- !u!114 &2735299784734382895
+  personje: {fileID: 6636533669565769562}
+--- !u!114 &6636533669565769562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,6 +240,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2735299784734382888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e33041ec6db624cab78128af92bf06, type: 3}
+  m_Script: {fileID: 11500000, guid: 09429ff14c0d9914e8f1223b0b80b677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  estado: 
+  inv: {fileID: 7400257376338766401}
+--- !u!114 &7400257376338766401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2735299784734382888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da627b31c7b31014686e0c211079dc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  BarraVyS: {fileID: 0}
+  slotHolder: {fileID: 0}

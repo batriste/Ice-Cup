@@ -1,19 +1,26 @@
-public class LogicaBarraVida : LogicaBarra
-{
-    // Start is called before the first frame update
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class LogicaBarraVida : MonoBehaviour 
+{ 
+    public Image imagenBarra;
+    private Personaje personje;
     void Start()
     {
 
+        personje = GameObject.FindGameObjectWithTag("Player").GetComponent(typeof(Personaje)) as Personaje;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (barraActual <= 0)
-        {
+        
+        RevisarBarra();
 
-            //llamariamos a la  funcion de final del juego
-        }
+    }
+    public void RevisarBarra()
+    {
+        imagenBarra.fillAmount = personje.vida.hpActual / personje.vida.hpMax ;
     }
 }
 

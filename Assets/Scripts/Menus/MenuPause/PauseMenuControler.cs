@@ -67,6 +67,7 @@ public class PauseMenuControler : MonoBehaviour
         {
             Salir();
         });
+        
     }
     void Salir()
     {
@@ -77,17 +78,22 @@ public class PauseMenuControler : MonoBehaviour
     {
         Debug.Log("continuant");
         SceneManager.UnloadSceneAsync("MenuPause");
-        //Time.timeScale = 1f;
+        
     }
-    // Update is called once per frame
-    void Update()
+   
+
+        // Update is called once per frame
+        void Update()
     {
+        
+        
         if (Input.GetButtonDown("Pause"))
         {
+            
             SceneManager.UnloadSceneAsync("MenuPause");
-            //Time.timeScale = 1f;
+            //
             Debug.Log("Despausant apretant esc");
-
+           
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class Slot : MonoBehaviour//, IPointerClickHandler
+public class Slot : MonoBehaviour
 {
     //item hará referencia al objeto dentro de la escena.
     public GameObject item = null;
@@ -27,22 +27,33 @@ public class Slot : MonoBehaviour//, IPointerClickHandler
 
         slotIconGameObject = transform.GetChild(0);
     }
+    public void Update()
+    {
+        UpdateSlot();
+    }
+    
     public void UpdateSlot()
     {
         slotIconGameObject.GetComponent<Image>().sprite = icon;
     }
-    /*public void OnPointerClick(PointerEventData pointerEventData)
-    {
-        empty = false;
-        
-        //if(slotHolder.transform.childCount <=10 && Input.GetButtonDown("Fire1")) UseItem();
-        
-    }*/
+ 
     
-    public void UseItem()
+    public void ItemEquiped()
     {
-        item.GetComponent<Item>().ItemUsage();
-        
+        if (item != null)
+        {
+            item.GetComponent<Item>().equipped = !item.GetComponent<Item>().equipped;
+            
+
+        }
     }
-    
+    public int resultado()
+    {
+
+        return item.GetComponent<Item>().ItemUsage();
+    }
+    public void Atacar()
+    {
+        item.GetComponent<Item>();
+    }
 }

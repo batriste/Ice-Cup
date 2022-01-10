@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - PuntoInicialA
   - PuntoInicialE
+  - Enemic
+  - Danyo
+  - "Da\xF1o"
   layers:
   - Default
   - TransparentFX

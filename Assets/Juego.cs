@@ -10,7 +10,7 @@ public class Juego : MonoBehaviour
     //Sera asi para poder llamar a las variables que guardemos desde los eventos.
     public static Juego juego;
     //La ruta + el nombre del archivo
-    private String rutaArchivo;
+    private string rutaArchivo;
     void Awake()
     {
         rutaArchivo = Application.persistentDataPath + "/icecup.dat";
@@ -27,9 +27,9 @@ public class Juego : MonoBehaviour
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(rutaArchivo);
-        DatosG datos = new DatosG();
+        /*DatosG datos = new DatosG();
         datos.puntuacionMaxima = nivel;
-        bf.Serialize(file, datos);
+        bf.Serialize(file, datos);*/
         file.Close();
     }
     void Cargar()
@@ -39,9 +39,9 @@ public class Juego : MonoBehaviour
 
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(rutaArchivo, FileMode.Open);
-            DatosG datos = (DatosG)bf.Deserialize(file);
-            nivel = datos.puntuacionMaxima;
-            file.Close;
+            /*DatosG datos = (DatosG)bf.Deserialize(file);
+            nivel = datos.puntuacionMaxima;*/
+            file.Close();
         }
         
     }
@@ -57,8 +57,9 @@ public class Juego : MonoBehaviour
         
     }
 }
-[Serializable]
+/*[Serializable]
 public class DatosG
 {
     public int puntuacionMaxima;
 }
+*/
